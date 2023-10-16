@@ -1,0 +1,19 @@
+.thin-container {
+	width: 990px;
+
+  @media (max-width: 990px) {
+    padding: 0 80px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 0 40px;
+  }
+}
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.pointer {
+  cursor: pointer;
+}

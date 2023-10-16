@@ -1,0 +1,68 @@
+// Typo-utilities
+.italic {
+  font-style: italic !important;
+}
+.bolder {
+  font-weight: bolder !important;
+}
+
+// Brand-typos (DancingScript@600)
+.dancing {
+	font-family: 'Dancing Script', cursive !important;
+}
+
+// Head-typos (EB Garamond @400; 400i; 600; 600i)
+.garamond {
+	font-family: 'EB Garamond', serif !important;
+}
+.h1 {
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-size: 36px;
+}
+.h2 {
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+// Body-typos (Inter @300; 500)
+.inter {
+	font-family: 'Inter', sans-serif !important;
+}
+.p1-r {
+	font-family: 'Inter', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+  line-height: 150%;
+}
+.p1-b {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+  line-height: 150%;
+}
+.p2-r {
+	font-family: 'Inter', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+  line-height: 150%;
+}
+.p2-b {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+  line-height: 150%;
+}
+.p3-r {
+	font-family: 'Inter', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+  line-height: 150%;
+}
+.p3-b {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+  line-height: 150%;
+}
