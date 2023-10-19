@@ -6,7 +6,7 @@ const i18n = createI18n({
 	globalInjection: true,
 	locale: (localStorage.getItem('lang') || 'en'),
 	fallbackLocale: 'en',
-	availableLocales: ['en', 'es' ],
+	availableLocales: ['en', 'es'],
 	messages: locales,
 })
 

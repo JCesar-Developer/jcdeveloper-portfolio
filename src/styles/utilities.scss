@@ -1,3 +1,73 @@
+// Often-used-utilities -------------------------------------------------------------
+strong {
+  font-weight: bold !important;
+}
+
+.fit-content {
+  width: fit-content;
+}
+// position-utilities
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mt-1 {
+  margin-top: .25rem;
+}
+.mt-2 {
+  margin-top: .5rem;
+}
+.mt-3 {
+  margin-top: .75rem;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.g-1 {
+  gap: .5rem;
+}
+.g-2 {
+  gap: 1rem;
+}
+.g-3 {
+  gap: 1.5rem;
+}
+.g-4 {
+  gap: 2rem;
+}
+.g-5 {
+  gap: 2.5rem;
+}
+
+// cursor-utilities
+.pointer {
+  cursor: pointer;
+  &:hover { opacity: 0.75; }
+}
+
+// Typo-utilities
+.italic {
+  font-style: italic !important;
+}
+.bolder {
+  font-weight: bolder !important;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.underline {
+  text-decoration: underline !important;
+}
+
+// Custom-utilities -------------------------------------------------------------
 .thin-container {
 	width: 990px;
 
@@ -9,11 +79,19 @@
     padding: 0 40px;
   }
 }
+.text-title {
+  font-weight: 700 !important;
+  margin-bottom: 7.5px;
+
+  &.uppercase {
+    text-transform: uppercase !important;
+  }
+}
 .center {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-.pointer {
-  cursor: pointer;
+ul.li-format {
+  padding-left: 15px;
 }

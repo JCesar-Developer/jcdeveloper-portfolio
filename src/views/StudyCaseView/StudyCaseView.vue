@@ -1,10 +1,10 @@
 <template>
-  <main id="study-case-view" class="center">
-    <div class="thin-container">
+  <div id="study-case-view">
+    <div class="column-container">
       <h1>StudyCaseView</h1>
       <p>Case: {{ _case }}</p>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">

@@ -1,0 +1,68 @@
+#about-view {
+
+	.column-container {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+
+    //SECTION-PROFILE -------------------------------------------------------------------------------
+    .section-profile {
+      display: flex;
+      flex-direction: row;
+      padding: 0 50px;
+      gap: 50px;
+    
+      //Profile-img
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+      //Profile-description
+      .profile-description-container {
+        position: relative;
+
+        //author
+        .profile-description-title {
+          margin-top: 40px;
+          position: absolute;
+          left: -80px;
+        }
+      
+        //description
+        .profile-description {
+          width: 100%;
+          padding-top: 150px;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+        
+          .more-description {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .text-accordion {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.5s ease-out;
+
+              &.seeMore {
+                max-height: 1000px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-more {
+      height: 300px;
+    }
+  }
+}

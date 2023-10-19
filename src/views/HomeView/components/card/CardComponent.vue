@@ -24,7 +24,7 @@
           </router-link>
         </li>
         <li>
-          <a :href="cardData.gitUrl" class="link p2-r" _blank>
+          <a :href="cardData.gitUrl" class="link p2-r" target="_blank">
             {{ $t( 'cards.source_code' ) }}
           </a>
         </li>

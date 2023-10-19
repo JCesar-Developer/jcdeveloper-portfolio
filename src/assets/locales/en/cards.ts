@@ -15,7 +15,7 @@ export const cards: ICard[] = [
     id: 2,
     title: 'Portfolio',
     imageUrl: require('@/assets/images/portfolio.jpg'),
-    gitUrl: '',
+    gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
     description: {
       title: 'Vue3 + Composition API',
       text: 'Get to know the design process of my personal website and the decisions I made to bring it to life.',
@@ -24,8 +24,8 @@ export const cards: ICard[] = [
   {
     id: 3,
     title: 'ng Music Player',
-    imageUrl: '',
-    gitUrl: '',
+    imageUrl: require('@/assets/images/ng-music-player.jpg'),
+    gitUrl: 'https://github.com/JulitoxD/ngMusicPlayer',
     description: {
       title: 'Angular 13 + Firebase',
       text: 'Web application for listening to music online. <br/><br/> It features a music player, and you can create a user account to save favorite songs and create personalized playlists.'
