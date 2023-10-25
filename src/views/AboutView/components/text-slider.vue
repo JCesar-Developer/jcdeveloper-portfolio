@@ -5,27 +5,31 @@
     <div class="text-selector d-flex flex-row align-items-center justify-content-end">
       <li class="pointer" v-for="(content) in texts" :key="content.id" @click="setCurrentText(content)" :class="{'active': (content.id == currentText!.id)}"></li>
     </div>
-    
-    <!-- CONTENT -->
-    <transition name="fade">
-      <TextContainer  v-if="textExists" :title="currentText!.title">
-        <p ref="content" class="p2-r t-gray" v-html="currentText!.description"></p>
-      </TextContainer>
-    </transition>
 
+    <Swiper @onSlideChange="onSlideChange" :items="texts"></Swiper>
+
+    <!-- SWIPPER-CONTENT -->
+    <!--<swiper-container class="w-100" @slidechange="onSlideChange">
+      <swiper-slide class="w-100" v-for="text in texts" :key="text.id">
+        <TextContainer :title="text.title">
+          <p ref="content" class="p2-r t-gray" v-html="text.description"></p>
+        </TextContainer>
+      </swiper-slide>
+    </swiper-container>-->
 
   </div>
 </template>
 
 <script setup lang="ts">
 import { Ref, ref, onBeforeMount, onMounted, defineProps, PropType, watch } from 'vue';
+
+import Swiper from '@/shared/swipper/swipper.vue';
 import TextContainer from './text-container.vue';
 import { IMoreDescription } from '@/interfaces/IAbout.interface';
 
 const props = defineProps({
   texts: { type: Array as PropType<IMoreDescription[]>, required: true }
 })
-const textExists: Ref<boolean> = ref(false);
 const currentText: Ref<IMoreDescription|null> = ref(null);
 const content = ref<HTMLElement | null>(null);
 
@@ -36,33 +40,30 @@ onBeforeMount(() => {
 
 onMounted(() => {
   formatChildren();
-  textExists.value = true;
 });
 
 watch(() => currentText.value, () => {
-  resetContent();
+  formatChildren();
 });
 
 const setCurrentText = (text: IMoreDescription) => {
   currentText.value = text;
+
 }
 
-const resetContent = () => {
-  textExists.value = false;
-  setTimeout(() => {
-    formatChildren();
-    textExists.value = true;
-  }, 250);
+const onSlideChange = (e: number) => {
+  console.log('slide change', e);
 };
 
 const formatChildren = () => {
   setTimeout(() => {
     if (content.value) {
-      const children = content.value.querySelectorAll('*');
-      children.forEach((child) => {
-        child.classList.add('p2-r');
-        child.classList.add('t-gray');
-      });
+      console.log(content.value);
+      //const children = content.value.querySelectorAll('*');
+      //children.forEach((child) => {
+      //  child.classList.add('p2-r');
+      //  child.classList.add('t-gray');
+      //});
     }
   }, 1);
 };

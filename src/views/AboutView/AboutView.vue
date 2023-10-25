@@ -23,6 +23,7 @@
 
             <!-- More-description -->
             <div class="more-description d-flex flex-column">
+
               <SeeMoreBtn @click="toogleSeeMore" :seeMore="seeMore"/>
 
               <div class="text-accordion" :class="{ 'active': seeMore }">
@@ -64,13 +65,14 @@
 </template>
 
 <script setup lang="ts">
+import { Ref, ref } from 'vue';
+import i18n from '@/plugins/i18n';
+
 import TextContainer from './components/text-container.vue';
 import TextSlider from './components/text-slider.vue';
 import PicturesGrid from './components/pictures-grid.vue';
 import SubjectSelector from './components/SubjectSelector/subject-selector.vue';
 import SeeMoreBtn from './components/see-more-btn.vue';
-import i18n from '@/plugins/i18n';
-import { Ref, ref } from 'vue';
 
   const seeMore: Ref<boolean> = ref(false);
   const toogleSeeMore = () => seeMore.value = !seeMore.value;

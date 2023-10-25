@@ -22,7 +22,6 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-
 defineProps({
   seeMore: { type: Boolean, required: true }
 });
