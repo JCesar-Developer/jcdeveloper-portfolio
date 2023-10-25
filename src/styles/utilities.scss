@@ -2,63 +2,27 @@
 strong {
   font-weight: bold !important;
 }
-
 .fit-content {
   width: fit-content;
-}
-// position-utilities
-.d-flex {
-  display: flex;
-}
-.align-items-center {
-  align-items: center;
-}
-.justify-content-end {
-  justify-content: end;
-}
-.mt-0 {
-  margin-top: 0;
-}
-.mt-1 {
-  margin-top: .25rem;
-}
-.mt-2 {
-  margin-top: .5rem;
-}
-.mt-3 {
-  margin-top: .75rem;
-}
-.mb-0 {
-  margin-bottom: 0;
-}
-.g-1 {
-  gap: .5rem;
-}
-.g-2 {
-  gap: 1rem;
-}
-.g-3 {
-  gap: 1.5rem;
-}
-.g-4 {
-  gap: 2rem;
-}
-.g-5 {
-  gap: 2.5rem;
 }
 
 // cursor-utilities
 .pointer {
   cursor: pointer;
-  &:hover { opacity: 0.75; }
 }
 
 // Typo-utilities
 .italic {
   font-style: italic !important;
 }
-.bolder {
-  font-weight: bolder !important;
+.light {
+  font-weight: lighter !important;
+}
+.normal {
+  font-weight: normal !important;
+}
+.bold {
+  font-weight: bold !important;
 }
 .uppercase {
   text-transform: uppercase !important;
@@ -66,25 +30,25 @@ strong {
 .underline {
   text-decoration: underline !important;
 }
-
+.hover-bold {
+  &:hover { font-weight: bold !important;}
+}
+.hover-underline {
+  &:hover { text-decoration: underline !important;}
+}
+.hover-ts-green {
+  &:hover { text-shadow: 0 0 10px greenyellow; }
+}
 // Custom-utilities -------------------------------------------------------------
 .thin-container {
-	width: 990px;
+	width: 992px;
 
-  @media (max-width: 990px) {
+  @media (max-width: 992px) {
+    width: 100%;
     padding: 0 80px;
   }
-
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     padding: 0 40px;
-  }
-}
-.text-title {
-  font-weight: 700 !important;
-  margin-bottom: 7.5px;
-
-  &.uppercase {
-    text-transform: uppercase !important;
   }
 }
 .center {
@@ -94,4 +58,26 @@ strong {
 }
 ul.li-format {
   padding-left: 15px;
+}
+.text-title {
+  font-weight: 700 !important;
+  margin-bottom: 7.5px;
+
+  &.uppercase {
+    text-transform: uppercase !important;
+  }
+}
+.text-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out, min-height .5s ease-in-out;
+
+  &.active {
+    min-height: 200px;
+    max-height: 200px;
+  }
 }

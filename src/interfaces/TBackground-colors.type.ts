@@ -1,0 +1,1 @@
+export const enum Background { primary = 'bg-900', primaryTransparent = 'bg-900t', secondary = 'bg-500', secondaryTransparent = 'bg-500t' }

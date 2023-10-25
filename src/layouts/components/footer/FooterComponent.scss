@@ -1,26 +1,18 @@
 @import '@/styles/color.scss';
 
-.footer-component {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-	margin-bottom: 80px;
+#footer-component {
+  .footer {
+    gap: 20px;
+    margin-bottom: 80px;
 
-	.garamond {
-		font-size: 18px;
-	}
+    .garamond {
+      font-size: 18px;
+    }
 
-	.nav-options {
-		display: flex;
-		flex-direction: row;
-		gap: 40px;
+    .nav-options {
+      gap: 40px;
+      a { transition: all .3s ease-in-out; }
+    }
+  }
 
-		a:hover {
-			font-weight: bolder;
-			color: $o-500;
-		}
-	}
 }

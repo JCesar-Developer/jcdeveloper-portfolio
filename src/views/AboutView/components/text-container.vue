@@ -1,15 +1,10 @@
 <template>
-  <div class="text-container">
+  <div id="text-container" class="d-flex flex-column">
     <!-- titulo -->
     <p class="text-title p3-r" :class="{ uppercase }">{{ title }}</p>
 
     <!-- single-content -->
     <slot v-if="slots.default"></slot>
-    
-    <!-- multiple-content -->
-    <ul v-if="items">
-      <li v-for="item in items" :key="item" class="p2-r" v-html="item"></li>
-    </ul>
   </div>
 </template>
 
@@ -25,17 +20,7 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.text-container {
-  display: flex;
-  flex-direction: column;
+#text-container {
   gap: 10px;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-    }
-  }
 }
 </style>

@@ -4,24 +4,39 @@ export const about: IAbout = {
   author: 'Julio César Asto Machuca',
   principal_description: 'Greetings, welcome to my profile. My name is Julio César Asto Machuca. I am a front-end web developer on my way to becoming a full-stack web developer. And, with the help of my favorite technologies: Figma, TypeScript, Angular, NodeJs, and Vue, I want to assist you with the design, development, and evolution of your web pages.',
   
-  more_description: {
-    1: {
+  more_description: [
+    {
+      id: 1,
       title: 'Continuous Learning:',
       description: 'I consider myself a person passionate about programming in a very meticulous way. I constantly find myself studying libraries and/or articles about how things work beneath the programming code. I love studying the architectural planning of different projects, and in the future, I aspire to have the knowledge and capability to consider myself a software architect.'
     },
-    2: {
+    {
+      id: 2,
       title: 'Quality Assurance:',
       description: 'As a professional, my commitment is to deliver applications of the highest quality. Applying all my knowledge in software design principles like SOLID and Clean Code, which will ensure that your web applications are highly readable, testable, and above all, scalable.'
     },
-    3: {
+    {
+      id: 3,
       title: 'Readability and Scalability:',
       description: "I believe that a good front-end project relies on several essential pillars. It's not enough to create attractive interfaces and fun, intuitive user experiences. My focus is on code that can be accessible, testable, and understandable for all team members. And that's where I dedicate my professional guarantee."
     },
-    4: {
+    {
+      id: 4,
       title: 'Passion and Collaboration:',
       description: 'I genuinely enjoy the opportunity to learn and collaborate closely within a team. I value the knowledge that my colleagues and collaborators bring because I consider it an endless source of learning and a springboard to success in the projects we undertake.'
-    },
-  },
+    }, 
+    {
+      id: 5,
+      title: 'Contact & Links',
+      description: `
+        julioasto.92@gmail.com
+        <br/><br/>
+        <a href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">🔗 LinkedIn </a>
+        <a>| 🔗 Resume </a>
+        <a>| 🔗 GitHub </a>
+      `
+    }
+  ],
 
   stack: {
     title: 'Technology Stack',
@@ -52,26 +67,12 @@ export const about: IAbout = {
       },
       { 
         subject: 'BACKEND',
-        technologies: 'NodeJs + ExpressJs || NestJs',
+        technologies: 'Currently learning: NodeJs + ExpressJs',
       },
       { 
         subject: 'DDBB',
         technologies: 'MySql || Firebase',
       },
-    ]
-  },
-
-  contact: {
-    title: 'Contact',
-    list: [ 'julioasto.92@gmail.com' ]
-  },
-
-  links: {
-    title: 'Links',
-    list: [ 
-      '🔗 LinkedIn',
-      '🔗 Resume',
-      '🔗 GitHub'
     ]
   },
 

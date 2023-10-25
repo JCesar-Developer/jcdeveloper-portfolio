@@ -1,15 +1,15 @@
 <template>
 	<div id="home-view">
-		<div class="column-container">
+		<div class="column-container d-flex flex-column">
 			
 			<!-- Tittle -->
-			<div class="presentation">
+			<div class="presentation w-100 d-flex flex-column">
 				<span class="t-gray">{{ $t('presentation.welcome_msg') }}</span>
 				<span class="h1"  style="font-style: italic;">{{ $t('presentation.introduction') }}</span>
 			</div>
 			
 			<!-- Cards -->
-      <div class="cards-container" v-if="i18n.global.messages.value[i18n.global.locale.value].cards.cardContent">
+      <div class="cards-container d-flex flex-column w-100" v-if="i18n.global.messages.value[i18n.global.locale.value].cards.cardContent">
         <CardComponent v-for="(card, index) in i18n.global.messages.value[i18n.global.locale.value].cards.cardContent" :key="card.id"
         :cardData="card" :positionRight="index % 2 !== 0"/>
       </div>

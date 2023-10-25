@@ -1,5 +1,5 @@
 <template>
-  <div class="pictures-grid">
+  <div id="pictures-grid w-100">
     <div class="image-1" style="background-color: blue;">Image 1</div>
     <div class="image-2" style="background-color: red;">Image 2</div>
     <div class="image-3" style="background-color: blue;">Image 3</div>
@@ -12,12 +12,11 @@
 <script setup lang="ts"></script>
 
 <style scoped lang="scss">
-.pictures-grid {
+#pictures-grid {
   display: grid;
+  gap: 15px; 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 15px; 
-  width: 100%;
   height: 600px;
 
   .image-1 {

@@ -1,11 +1,11 @@
 <template>
 	<div id="about-view">
-		<div class="column-container">
+		<div class="column-container d-flex flex-column">
 
       <!-- SECTION: PROFILE -->
-      <section class="section-profile">
+      <section class="section-profile d-flex flex-column flex-md-row">
 
-        <!-- Profile-img -->
+        <!-- Profile-picture -->
         <div class="profile-picture">
           <img src="@/assets/images/profile-img.jpg" alt="Profile picture" />
         </div>
@@ -18,28 +18,23 @@
           </div>
 
           <!-- Description -->
-          <div class="profile-description">
-            <p class="p1-r" v-html="$t( 'about.principal_description' )"></p>
+          <div class="profile-description w-100 d-flex flex-column">
+            <p class="principal-description p1-r" v-html="$t( 'about.principal_description' )"></p>
 
             <!-- More-description -->
-            <div class="more-description">
+            <div class="more-description d-flex flex-column">
               <SeeMoreBtn @click="toogleSeeMore" :seeMore="seeMore"/>
 
-              <div class="text-accordion" :class="{ seeMore }">
-                <TextContainer v-for="(item, index) in i18n.global.messages.value[i18n.global.locale.value].about.more_description" :key="index" :title="item.title">
-                  <p class="p2-r t-gray">{{ item.description }}</p>
-                </TextContainer>
-
-                <TextContainer :title="$t( 'about.contact.title' )" uppercase :items="i18n.global.messages.value[i18n.global.locale.value].about.contact.list"/>
-
-                <TextContainer :title="$t( 'about.links.title' )" uppercase :items="i18n.global.messages.value[i18n.global.locale.value].about.links.list"/>
+              <div class="text-accordion" :class="{ 'active': seeMore }">
+                <TextSlider :texts="i18n.global.messages.value[i18n.global.locale.value].about.more_description"/>                
               </div>
-              <hr class="mt-0 mb-0" style="width: 100%">
+
+              <hr class="mt-4 mb-0" style="width: 100%">
             </div>
             
             <!-- Technology-stack -->
             <TextContainer :title="$t( 'about.stack.title' )">
-              <table class="table">
+              <table class="tech-stack">
                 <tbody>
                   <tr v-for="(item, index) in i18n.global.messages.value[i18n.global.locale.value].about.stack.table" :key="index">
                     <td class="p2-b">{{ item.subject }}</td>
@@ -70,14 +65,15 @@
 
 <script setup lang="ts">
 import TextContainer from './components/text-container.vue';
+import TextSlider from './components/text-slider.vue';
 import PicturesGrid from './components/pictures-grid.vue';
-import SubjectSelector from './components/subject-selector.vue';
+import SubjectSelector from './components/SubjectSelector/subject-selector.vue';
 import SeeMoreBtn from './components/see-more-btn.vue';
 import i18n from '@/plugins/i18n';
 import { Ref, ref } from 'vue';
 
-const seeMore: Ref<boolean> = ref(false);
-const toogleSeeMore = () => seeMore.value = !seeMore.value;
+  const seeMore: Ref<boolean> = ref(false);
+  const toogleSeeMore = () => seeMore.value = !seeMore.value;
 </script>
 
 <style src="./AboutView.scss" scoped lang="scss"></style>

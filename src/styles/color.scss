@@ -7,6 +7,10 @@ $bg-500: #8585A8;
 $bg-300: #B7B7D5;
 $bg-100: #EBEBF3;
 
+//special-bg-colors
+$bg-900t: #1e202ee6;
+$bg-700t: #505068e6;
+
 //text-colors
 $t-gray: #6B6C74;
 $t-white: #FFFFFF;
@@ -25,6 +29,25 @@ $o-300: #FDDFA5;
 .bg-300 { background-color: $bg-300 !important }
 .bg-100 { background-color: $bg-100 !important }
 
+//special-bg-color-utilities
+.bg-900t { background-color: $bg-900t !important }
+.bg-700t { background-color: $bg-700t !important }
+
 //text-color-utilities
 .t-gray { color: $t-gray !important }
 .t-white { color: $t-white !important }
+
+//accent-color-utilities
+.bg-g-500 { background-color: $g-500 !important }
+.bg-g-300 { background-color: $g-300 !important }
+.bg-o-500 { background-color: $o-500 !important }
+.bg-o-300 { background-color: $o-300 !important }
+.t-g-500 { color: $g-500 !important }
+.t-g-300 { color: $g-300 !important }
+.t-o-500 { color: $o-500 !important }
+.t-o-300 { color: $o-300 !important }
+
+.hover-o-500 { &:hover { color: $o-500 !important } }
+.hover-o-300 { &:hover { color: $o-300 !important } }
+.hover-g-500 { &:hover { color: $g-500 !important } }
+.hover-g-300 { &:hover { color: $g-300 !important } }

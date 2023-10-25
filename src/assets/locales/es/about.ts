@@ -4,24 +4,40 @@ export const about: IAbout = {
   author: 'Julio César Asto Machuca',
   principal_description: 'Saludos, bienvenido a mi perfil. Mi nombre es Julio César Asto Machuca. Soy desarrollador web front-end de camino a convertirme en un desarrollador web full-stack. Y, de la mano de mis tecnologías favoritas: Figma, TypeScript, Angular, NodeJs y Vue, quiero ayudarte con el diseño, desarrollo y evolución de tus páginas web.',
   
-  more_description: {
-    1: {
+  more_description: [
+    {
+      id: 1,
       title: 'Aprendizaje constante:',
-      description: 'Me considero una persona apasionada por la programación de manera muy minuciosa, constantemente me encuentro a mí mismo, estudiando librerías y/o artículos sobre como funcionan las cosas por debajo del código de programación. Me encanta estudiar la planificación arquitectónica de diferentes proyectos y en un futuro aspiro a tener el conocimiento y la capacidad suficiente para considerarme a mí mismo un arquitecto de software.'
+      description: 'Me considero una persona apasionada por la programación de manera muy minuciosa. Constantemente me encuentro a mí mismo, estudiando librerías y/o artículos sobre como funcionan las cosas por debajo del código de programación. Me encanta estudiar la planificación arquitectónica de diferentes proyectos y en un futuro aspiro a tener el conocimiento y la capacidad suficiente para considerarme a mí mismo un arquitecto de software.'
     },
-    2: {
+    {
+      id: 2,
       title: 'Garantía de calidad:',
       description: 'Como profesional, mi compromiso es entregar aplicaciones de la más alta calidad. Aplicando todo mi conocimiento en principios de diseño de software, como SOLID y Clean Code, lo que garantizarán que tus aplicaciones web sean altamente legibles, testeables y sobre todo escalables.'
     },
-    3: {
+    {
+      id: 3,
       title: 'Legibilidad y escalabilidad:',
       description: 'Considero que un buen proyecto de front-end, se sostiene de varios pilares esenciales. No basta solo con crear interfaces vistosas y experiencias de usuario divertidas e intuitivas. Mi enfoque se orienta hacia un código que pueda ser accesible, testeable y comprensible para todos los miembros del equipo. Y a ello le dedico mi garantía profesional.'
     },
-    4: {
+    {
+      id: 4,
       title: 'Pasión y colaboración:',
       description: 'Disfruto genuinamente la oportunidad de aprender y colaborar estrechamente en un equipo de trabajo. Valoro el conocimiento que mis compañeros y colaboradores aportan, ya que lo considero una fuente inagotable de aprendizaje y un trampolín hacia el éxito en los proyectos que emprendemos.'
-    },
-  },
+    }, 
+    {
+      id: 5,
+      title: 'Contact & Links',
+      description: `
+        julioasto.92@gmail.com
+        <br/><br/>
+        <a href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">🔗 LinkedIn </a>
+        <a>| 🔗 Resume </a>
+        <a>| 🔗 GitHub </a>
+          
+      `
+    }
+  ],
 
   stack: {
     title: 'Stack de tecnologías',
@@ -58,20 +74,6 @@ export const about: IAbout = {
         subject: 'DDBB',
         technologies: 'MySql || Firebase',
       },
-    ]
-  },
-  
-  contact: {
-    title: 'Contacto',
-    list: [ 'julioasto.92@gmail.com' ]
-  },
-
-  links: {
-    title: 'Enlaces',
-    list: [ 
-      'LinkedIn',
-      'Resume',
-      'GitHub'
     ]
   },
 

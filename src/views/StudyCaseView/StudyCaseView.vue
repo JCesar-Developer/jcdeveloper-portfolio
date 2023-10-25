@@ -9,12 +9,6 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-
 const route = useRoute();
-
 const _case = route.params.case;
 </script>
-
-<style lang="scss">
-  
-</style>

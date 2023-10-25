@@ -1,5 +1,5 @@
 <template>
-	<div class="card-container" :class="{ 'right': positionRight }">
+	<div id="card-container" class="d-flex justify-content-between" :class="{ 'right': positionRight }">
 
     <!-- Title -->
 		<div class="title" :class="{ 'right': positionRight }">
@@ -7,29 +7,44 @@
 		</div>
 
     <!-- Image -->
-		<div class="image-container" :class="{ 'right': positionRight }">	
+		<div class="image-container d-flex justify-content-center align-items-center" :class="{ 'right': positionRight }">	
       <img class="image" :src="cardData.imageUrl" :alt="cardData.title">
 		</div>
 
     <!-- Description -->
-		<div class="description-card" :class="{ 'right': positionRight }">
-			<span class="description-header p1-r garamond">{{ cardData.description.title }}</span>
-			<span class="description-body p2-r" v-html="cardData.description.text"></span>
+		<div class="description-card d-flex flex-column" :class="{ 'right': positionRight }">
+			
+      <span class="description-header p1-r garamond t-gray bold uppercase">{{ cardData.description.title }}</span>
+			<span class="description-body p2-r italic light" v-html="description"></span>
 			
       <!-- Links -->
-      <ul class="links" :class="{ 'right': positionRight }">
+      <ul v-if="innerWidth > 576" class="links d-flex flex-column" :class="{ 'right': positionRight }">
         <li>
-          <router-link class="link p2-r" :to="{ name: 'study-case', params: { case: cardData.title } }">
+          <router-link class="link p2-r t-gray hover-bold hover-o-500" :to="{ name: 'study-case', params: { case: cardData.title } }">
             {{ $t( 'cards.read_more' ) }}
           </router-link>
         </li>
         <li>
-          <a :href="cardData.gitUrl" class="link p2-r" target="_blank">
+          <a :href="cardData.gitUrl" class="link p2-r t-gray hover-bold hover-o-500" target="_blank">
             {{ $t( 'cards.source_code' ) }}
           </a>
         </li>
       </ul>
 		</div>
+
+    <!-- Links-btns -->
+    <div v-if="innerWidth < 576" class="d-flex flex-column gap-3 w-100">
+      <router-link :to="{ name: 'study-case', params: { case: cardData.title } }">
+        <button class="btn btn-primary">
+          {{ $t( 'cards.read_more' ) }}
+        </button>
+      </router-link>
+      <button class="btn btn-secondary">
+        <a :href="cardData.gitUrl" target="_blank">
+          {{ $t( 'cards.source_code' ) }}
+        </a>
+      </button>
+    </div>
 
 	</div>
 </template>

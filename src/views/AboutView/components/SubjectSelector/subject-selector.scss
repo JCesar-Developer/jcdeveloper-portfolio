@@ -1,0 +1,49 @@
+@import '@/styles/color.scss';
+
+@keyframes typing {
+  0% { letter-spacing: -9px; }
+  100% { letter-spacing: normal; }
+}
+
+#subject-selector {
+gap: 40px;
+
+  .subjects {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 30%;
+    gap: 1rem;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      width: 70%;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+
+    .h2 {
+      font-size: 24px;
+      &.green { color: $g-500; }
+      &.orange { color: $o-500; }
+      &.current-subject { text-shadow: 0 0 10px greenyellow; }
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  #text-container {
+    flex: 1;
+    animation: typing 1s ease forwards;
+    height: 200px;
+    overflow: hidden;
+
+    @media (max-width: 576px) {
+      min-height: 250px;
+      max-height: 350px;
+    }
+  }
+}

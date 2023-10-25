@@ -1,29 +1,27 @@
-.header-container {
+#header-component {
 	padding-top: 40px;
+  transition: background-color .5s ease-in;
+
+  @media (max-width: 576px) {
+    padding-bottom: 20px;
+    position: sticky;
+    z-index: 1;
+    top: -20px;
+  }
 
 	.header {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-
-    @media (max-width: 720px) {
-      flex-direction: column;
+    @media (max-width: 768px) {
       gap: 20px;
     }
 
 		.logo {
-			font-family: 'Dancing Script', cursive;
 			font-size: 45px;
-
-      @media (max-width: 540px) {
-  			font-size: 24px;
+      @media (max-width: 576px) {
+        font-size: 24px;
       }
 		}
 
 		nav {
-			display: flex;
-			flex-direction: row;
 			gap: 40px;
 			text-decoration: none;
 
@@ -38,8 +36,6 @@
 			}
 
 			.language-toggler {
-				cursor: pointer;
-
 				&.is-active {
 					font-weight: bolder;
 				}

@@ -1,0 +1,18 @@
+@import './color.scss';
+
+.btn {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-weight: 500;
+
+  &.btn-primary {
+    background-color: $g-500;
+    color: $bg-900;
+  }
+
+  &.btn-secondary {
+    background-color: $bg-500;
+    color: white;
+  }
+}

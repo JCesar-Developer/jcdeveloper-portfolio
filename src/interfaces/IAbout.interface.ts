@@ -1,22 +1,19 @@
 export interface IAbout {
   author: string;
   principal_description: string;
-  more_description: {
-    [key: number]: IMoreDescription;
-  };
+  more_description: IMoreDescription[];
   stack: {
     title: string;
     table: ITechnology[];
   };
-  contact: IList;
-  links: IList;
   more_about: {
     title: string;
-    subjects: IMoreAboutDescription[];
+    subjects: IMoreDescription[];
   }
 }
 
-interface IMoreDescription {
+export interface IMoreDescription {
+  id: number;
   title: string;
   description: string;
 }
@@ -29,10 +26,4 @@ interface ITechnology {
 interface IList {
   title: string;
   list: string[];
-}
-
-export interface IMoreAboutDescription {
-  id: number;
-  title: string;
-  description: string;
 }
