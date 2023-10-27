@@ -60,7 +60,7 @@ const onFadePage = () => {
   fadePage.value = !fadePage.value;
   setTimeout(() => {
     fadePage.value = !fadePage.value;
-  }, 500);
+  }, 250);
 }
 
 const onRouteEnter = (to: RouteLocationNormalizedLoaded, from: RouteLocationNormalizedLoaded, next: () => void) => {
@@ -86,6 +86,10 @@ router.beforeResolve(onRouteEnter)
 <style lang="scss">
 #main-container {
   transition: background-color .5s ease-in;
+
+  @media (min-width: 540px) {
+    overflow-x: hidden;
+  }
   
   .main-content {
     width: 100%;

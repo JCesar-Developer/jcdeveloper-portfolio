@@ -5,8 +5,8 @@
 		
       <nav class="nav-options d-flex flex-row">
         <a class="hover-bold hover-o-500" href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">linked-in</a>
-        <a class="hover-bold hover-o-500" href="#">resume</a>
-        <a class="hover-bold hover-o-500" href="#">github</a>
+        <a class="hover-bold hover-o-500" href="https://julitoxd.github.io/assets/docs/CV_JulioC%C3%A9sar_AstoMachuca(en).pdf" target="_blank">resume</a>
+        <a class="hover-bold hover-o-500" href="https://github.com/JulitoxD" target="_blank">github</a>
       </nav>
     </div>
 	</footer>

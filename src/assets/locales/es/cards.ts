@@ -7,8 +7,12 @@ export const cards: ICard[] = [
     imageUrl: require('@/assets/images/mmc-app.jpg'),
     gitUrl: 'https://github.com/JulitoxD/mmc-app',
     description: {
-      title: 'Angular 15 + NodeJS + MySQL',
-      text: 'Panel de control (BackOffice) para empresa (MMC). Aplicación cuya funcionalidad es brindar control de cuentas de usuarios y seguimiento estadístico de ventas a los administradores de una tienda online de ventas de tickets y entradas a eventos. <br/><br/> Maneja dos perfiles de usuario: <span style="font-weight: bolder;">Administrador & Usuario</span>',
+      title: 'Angular 15 + Bootstrap',
+      text: `Panel de control para empresa Mobile Media Content. Funcionalidad por roles: 
+      <br/><br/>
+      <strong>(Admin): </strong> Gestionar cuentas de usuarios. Y seguimiento estadístico de ventas online. 
+      <br/> <br/>
+      <strong>(User): </strong> Compra de entradas (tickets) a eventos recreativos a través de su plataforma online.`,
     }
   },
   { 
@@ -17,8 +21,8 @@ export const cards: ICard[] = [
     imageUrl: require('@/assets/images/portfolio.jpg'),
     gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
     description: {
-      title: 'Vue3 + Composition API',
-      text: 'Conoce el proceso de diseño de mi web personal y las decisiones que tomé para llevarla a cabo.',
+      title: 'Vue3 + Bootstrap',
+      text: 'Conoce el proceso de diseño y desarrollo de mi página web personal y las decisiones que tomé para llevarla a cabo.',
     }
   },
   {

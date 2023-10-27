@@ -23,11 +23,12 @@ gap: 40px;
       width: 100%;
     }
 
-    .h2 {
+    .subject {
       font-size: 24px;
       &.green { color: $g-500; }
       &.orange { color: $o-500; }
       &.current-subject { text-shadow: 0 0 10px greenyellow; }
+      transition: all 0.2s ease-in-out;
 
       @media (max-width: 768px) {
         font-size: 22px;

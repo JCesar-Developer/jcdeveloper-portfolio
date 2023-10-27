@@ -3,82 +3,69 @@
 
     <!-- SELECTOR -->
     <div class="text-selector d-flex flex-row align-items-center justify-content-end">
-      <li class="pointer" v-for="(content) in texts" :key="content.id" @click="setCurrentText(content)" :class="{'active': (content.id == currentText!.id)}"></li>
+      <li v-for="{ id } in texts" :key="id" class="pointer" :class="{'active': (id == currentTextId)}" @click="onSlideChange(id)"></li>
     </div>
 
-    <Swiper @onSlideChange="onSlideChange" :items="texts"></Swiper>
-
     <!-- SWIPPER-CONTENT -->
-    <!--<swiper-container class="w-100" @slidechange="onSlideChange">
-      <swiper-slide class="w-100" v-for="text in texts" :key="text.id">
+    <Swiper @onSlideChange="onSlideChange" :textId="currentTextId">
+      <swiper-slide v-for="text in texts" :key="text.id">
         <TextContainer :title="text.title">
           <p ref="content" class="p2-r t-gray" v-html="text.description"></p>
         </TextContainer>
       </swiper-slide>
-    </swiper-container>-->
-
+    </Swiper>
   </div>
 </template>
 
 <script setup lang="ts">
 import { Ref, ref, onBeforeMount, onMounted, defineProps, PropType, watch } from 'vue';
 
-import Swiper from '@/shared/swipper/swipper.vue';
+import SwiperSlide from '@/shared/swiper/swiper-slide/swiper-slide.vue';
+import Swiper from '@/shared/swiper/swiper.vue';
+
 import TextContainer from './text-container.vue';
 import { IMoreDescription } from '@/interfaces/IAbout.interface';
 
 const props = defineProps({
   texts: { type: Array as PropType<IMoreDescription[]>, required: true }
 })
-const currentText: Ref<IMoreDescription|null> = ref(null);
-const content = ref<HTMLElement | null>(null);
+
+const currentTextId: Ref<number|null> = ref(null);
+const content = ref<HTMLElement[] | null>(null);
 
 onBeforeMount(() => {
   if ( !props.texts ) return;
-  currentText.value = props.texts[0];
+  currentTextId.value = props.texts[0].id;
 })
 
 onMounted(() => {
   formatChildren();
 });
 
-watch(() => currentText.value, () => {
-  formatChildren();
-});
-
-const setCurrentText = (text: IMoreDescription) => {
-  currentText.value = text;
-
-}
-
-const onSlideChange = (e: number) => {
-  console.log('slide change', e);
+const onSlideChange = (index: number) => {
+  currentTextId.value = index;
 };
 
 const formatChildren = () => {
   setTimeout(() => {
     if (content.value) {
-      console.log(content.value);
-      //const children = content.value.querySelectorAll('*');
-      //children.forEach((child) => {
-      //  child.classList.add('p2-r');
-      //  child.classList.add('t-gray');
-      //});
+      content.value.forEach(element => {
+        element.querySelectorAll('*').forEach(child => {
+          child.classList.add('p2-r');
+          child.classList.add('t-gray');
+        });
+        element.querySelectorAll('a').forEach(ancortag => {
+          ancortag.classList.add('hover-bold');
+          ancortag.classList.add('hover-o-500');
+        });
+      });
     }
-  }, 1);
+  }, 0);
 };
 </script>
 
 <style scoped lang="scss">
 @import '@/styles/color.scss';
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .25s ease-out;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
 #text-slider {
   .text-selector {
     li {

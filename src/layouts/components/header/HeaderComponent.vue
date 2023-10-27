@@ -32,7 +32,7 @@ import { Background } from '@/interfaces/TBackground-colors.type';
   const route = useRoute();
   const { locale } = useI18n();
 
-  const bgColor: Ref<Background> = ref(Background.primaryTransparent);
+  const bgColor: Ref<Background|null> = ref(null);
 
   onBeforeMount(() => {
     setBgColor( route.name )
@@ -43,7 +43,9 @@ import { Background } from '@/interfaces/TBackground-colors.type';
   });
 
   const setBgColor = (route: RouteRecordName | null | undefined ) => {  
+    if ( window.innerWidth > 576 && route !== 'study-case' ) bgColor.value = Background.primary;
     if ( window.innerWidth < 576 && route !== 'study-case' ) bgColor.value = Background.primaryTransparent;
+    if ( window.innerWidth > 576 && route === 'study-case' ) bgColor.value = Background.secondary;
     if ( window.innerWidth < 576 && route === 'study-case' ) bgColor.value = Background.secondaryTransparent;
   }
 

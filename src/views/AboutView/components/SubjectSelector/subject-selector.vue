@@ -3,7 +3,7 @@
     
     <!-- Subjects -->
     <div class="subjects">
-      <div v-for="(subject, index) of subjects" :key="subject.title" class="h2 pointer hover-ts-green" :class="[color(index), {'current-subject': (subject.id == currenSubject!.id)}]" @click="changeSubject( subject )">
+      <div v-for="(subject, index) of subjects" :key="subject.title" class="subject h2 pointer hover-ts-green" :class="[color(index), {'current-subject': (subject.id == currenSubject!.id)}]" @click="changeSubject( subject )">
         {{ subject.title }}
       </div>
     </div>

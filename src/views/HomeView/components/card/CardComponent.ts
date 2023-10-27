@@ -1,4 +1,4 @@
-import { defineComponent, PropType, computed } from "vue"
+import { defineComponent, PropType, computed, watch } from "vue"
 import { ICard } from "@/interfaces/ICard.interface"
 
 export default defineComponent({
@@ -14,8 +14,8 @@ export default defineComponent({
         return props.cardData.description.text.slice(0, 150) + '...';
       else 
         return props.cardData.description.text;
-    })
-    
+    });
+
     return {
       description,
       innerWidth,

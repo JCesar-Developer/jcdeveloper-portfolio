@@ -7,8 +7,12 @@ export const cards: ICard[] = [
     imageUrl: require('@/assets/images/mmc-app.jpg'),
     gitUrl: 'https://github.com/JulitoxD/mmc-app',
     description: {
-      title: 'Angular 15 + NodeJS + MySQL',
-      text: 'Control Panel (BackOffice) for Company (MMC). An application whose functionality is to provide user account control and statistical sales tracking to the administrators of an online store for ticket and event entry sales. <br/><br/> It manages two user profiles: <span style="font-weight: bolder;">Administrator & User</span>',     
+      title: 'Angular 15 + Bootstrap',
+      text: `Control panel for Mobile Media Content company. Role-based functionality: 
+      <br/><br/>
+      <strong>(Admin): </strong> Manage user accounts and track online sales statistics. 
+      <br/> <br/>
+      <strong>(User): </strong> Purchase tickets for recreational events through the online platform.`,
     }
   },
   { 
@@ -17,8 +21,8 @@ export const cards: ICard[] = [
     imageUrl: require('@/assets/images/portfolio.jpg'),
     gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
     description: {
-      title: 'Vue3 + Composition API',
-      text: 'Get to know the design process of my personal website and the decisions I made to bring it to life.',
+      title: 'Vue3 + Bootstrap',
+      text: 'Learn about the design and development process of my personal website and the decisions I made to create it.',
     }
   },
   {
@@ -28,7 +32,7 @@ export const cards: ICard[] = [
     gitUrl: 'https://github.com/JulitoxD/ngMusicPlayer',
     description: {
       title: 'Angular 13 + Firebase',
-      text: 'Web application for listening to music online. <br/><br/> It features a music player, and you can create a user account to save favorite songs and create personalized playlists.'
+      text: 'Online music listening web application. <br/><br/> It features a music player, the ability to create a user account to save favorite songs, and create personalized playlists.',
     }
   }
 ]

@@ -10,7 +10,7 @@ export const locale_es = {
 
 	presentation: {
 		welcome_msg: '¡Bienvenido!',
-		introduction: 'Mi nombre es Julio César, desarrollador web front end de Angular y Vue. Me encanta el proceso de desarrollo web, desde su diseño visual y arquitectónico, pasando por su codificación y constante evolución.',
+		introduction: 'Mi nombre es Julio César, ingeniero UI/UX y desarrollador web Front End con más de un año de experiencia. Especializado principalmente en el diseño de experiencias de usuario con Angular y Vue.',
 	},
 	
   cards: {
