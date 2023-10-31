@@ -33,7 +33,7 @@ export const about: IAbout = {
         <br/><br/>
         <a href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">🔗 LinkedIn </a>|
         <a href="https://drive.google.com/file/d/1XVz6LfjzG2i1B-d_bHLOfHg1m8geF8CP/view?usp=drive_link" target="_blank"> 🔗 Resume </a>|
-        <a href="https://github.com/JulitoxD" target="_blank"> 🔗 GitHub </a>
+        <a href="https://github.com/JCesar-Developer" target="_blank"> 🔗 GitHub </a>
       `
     }
   ],
