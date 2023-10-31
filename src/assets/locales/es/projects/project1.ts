@@ -5,7 +5,6 @@ export const project1: IProject =  {
   id: '1',
   title: 'MMC Backoffice',
   subtitle: '',
-  gitUrl: 'https://github.com/JulitoxD/mmc-app',
 
   cardContent: {
     image: require('@/assets/images/mmc-app.jpg'),

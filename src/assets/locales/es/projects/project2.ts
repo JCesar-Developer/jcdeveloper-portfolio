@@ -3,7 +3,7 @@ import Template from "@/interfaces/Templates.type"
 
 export const project2: IProject =  {
   id: '2',
-  title: 'Portfolio',
+  title: 'Portafolio',
   subtitle: 'Website personal - 2023',
   gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
 

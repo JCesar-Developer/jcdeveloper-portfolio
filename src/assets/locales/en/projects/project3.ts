@@ -5,7 +5,6 @@ export const project3: IProject =  {
   id: '3',
   title: 'ng Music Player',
   subtitle: '',
-  gitUrl: 'https://github.com/JulitoxD/ngMusicPlayer',
   
   cardContent: {
     image: require('@/assets/images/ng-music-player.jpg'),

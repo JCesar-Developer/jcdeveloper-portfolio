@@ -9,6 +9,7 @@ export const locale_es = {
 	},
 
   general: {
+    building_content: 'Contenido en construcción',
     see_less: 'Ver menos...',
     see_more: 'Ver más...',
   },

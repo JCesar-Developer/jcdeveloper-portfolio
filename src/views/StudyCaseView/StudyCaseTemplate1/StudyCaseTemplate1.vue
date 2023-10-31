@@ -1,12 +1,13 @@
 <template >
   <div v-if="project" id="template-container" class="d-flex flex-column align-items-center">
 
-    <LinkButtons v-if="innerWidth > 576" :demoUrl="project.gitUrl" :gitUrl="project.gitUrl"/>
+    <LinkButtons v-if="innerWidth > 576" :demoUrl="project.demoUrl" :gitUrl="project.gitUrl"/>
 
-    <!-- PROVISIONAL-TITLE -->
+    <!-- IF: NO-CONTENT -->
     <div v-if="!hero" class="text-center">
       <div class="p3-r letter-spaced mb-2">{{ project.subtitle }}</div>
       <div class="h1 uppercase">{{ project.title }}</div>
+      <h1 class="mt-5">{{ $t( 'general.building_content' ) }}</h1>
     </div>
 
     <!-- SECTION: HERO -->

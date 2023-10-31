@@ -5,7 +5,8 @@ export interface IProject {
   id: string;
   title: string;
   subtitle: string;
-  gitUrl: string;
+  demoUrl?: string;
+  gitUrl?: string;
   cardContent: ICardContent;
   projectContent: IPRojectContent;
 }
