@@ -18,12 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref, onBeforeMount, onMounted, defineProps, PropType, watch } from 'vue';
-
+import { Ref, ref, onBeforeMount, onMounted, defineProps, PropType } from 'vue';
 import SwiperSlide from '@/shared/swiper/swiper-slide/swiper-slide.vue';
 import Swiper from '@/shared/swiper/swiper.vue';
-
-import TextContainer from './text-container.vue';
+import TextContainer from '@/shared/TextContainer/text-container.vue';
 import { IMoreDescription } from '@/interfaces/IAbout.interface';
 
 const props = defineProps({

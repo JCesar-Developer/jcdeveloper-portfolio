@@ -1,4 +1,4 @@
-import { cards } from './cards';
+import { projects } from './projects';
 import { about } from './about';
 
 export const locale_es = {
@@ -16,7 +16,7 @@ export const locale_es = {
   cards: {
     read_more: 'Leer estudio del caso >',
     source_code: 'Ver código fuente >',
-    cardContent: cards,
+    projects,
   },
   
   about,

@@ -8,19 +8,19 @@
 
     <!-- Image -->
 		<div class="image-container d-flex justify-content-center align-items-center" :class="{ 'right': positionRight }">	
-      <img class="image" :src="cardData.imageUrl" :alt="cardData.title">
+      <img class="image" :src="cardData.cardContent.image" :alt="cardData.title">
 		</div>
 
     <!-- Description -->
 		<div class="description-card d-flex flex-column" :class="{ 'right': positionRight }">
 			
-      <span class="description-header p1-r garamond t-gray bold uppercase">{{ cardData.description.title }}</span>
+      <span class="description-header p1-r garamond t-gray bold uppercase">{{ cardData.cardContent.description.title }}</span>
 			<span class="description-body p2-r italic light" v-html="description"></span>
 			
       <!-- Links -->
       <ul v-if="innerWidth > 576" class="links d-flex flex-column" :class="{ 'right': positionRight }">
         <li>
-          <router-link class="link p2-r t-gray hover-bold hover-o-500" :to="{ name: 'study-case', params: { case: cardData.title } }">
+          <router-link class="link p2-r t-gray hover-bold hover-o-500" :to="{ name: `study-case-${cardData.projectContent.template}`, params: { id: cardData.id } }">
             {{ $t( 'cards.read_more' ) }}
           </router-link>
         </li>
@@ -34,7 +34,7 @@
 
     <!-- Links-btns -->
     <div v-if="innerWidth < 576" class="d-flex flex-column gap-3 w-100">
-      <router-link :to="{ name: 'study-case', params: { case: cardData.title } }">
+      <router-link :to="{ name: `study-case-${cardData.projectContent.template}`, params: { id: cardData.id } }">
         <button class="btn btn-primary">
           {{ $t( 'cards.read_more' ) }}
         </button>

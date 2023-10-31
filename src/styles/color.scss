@@ -8,8 +8,8 @@ $bg-300: #B7B7D5;
 $bg-100: #EBEBF3;
 
 //special-bg-colors
-$bg-900t: #1e202ee6;
-$bg-700t: #505068e6;
+$bg-900t: rgba(30, 32, 46, 0.9);
+$bg-500t: rgba(133, 133, 168, 0.9);
 
 //text-colors
 $t-gray: #6B6C74;
@@ -31,7 +31,7 @@ $o-300: #FDDFA5;
 
 //special-bg-color-utilities
 .bg-900t { background-color: $bg-900t !important }
-.bg-700t { background-color: $bg-700t !important }
+.bg-500t { background-color: $bg-500t !important }
 
 //text-color-utilities
 .t-gray { color: $t-gray !important }

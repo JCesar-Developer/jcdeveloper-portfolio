@@ -19,9 +19,14 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import(/* webpackChunkName: "About" */ '../views/AboutView/AboutView.vue')
       },
       {
-        path: '/study-case/:case',
-        name: 'study-case',
-        component: () => import(/* webpackChunkName: "Study Case" */ '../views/StudyCaseView/StudyCaseView.vue')
+        path: '/study-case-t1/:id',
+        name: 'study-case-t1',
+        component: () => import(/* webpackChunkName: "Study Case" */ '../views/StudyCaseView/StudyCaseTemplate1/StudyCaseTemplate1.vue')
+      },
+      {
+        path: '/study-case-t2/:id',
+        name: 'study-case-t2',
+        component: () => import(/* webpackChunkName: "Study Case" */ '../views/StudyCaseView/StudyCaseTemplate2/StudyCaseTemplate2.vue')
       },
     ] 
   },

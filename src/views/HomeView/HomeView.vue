@@ -9,8 +9,8 @@
 			</div>
 			
 			<!-- Cards -->
-      <div class="cards-container d-flex flex-column w-100" v-if="i18n.global.messages.value[i18n.global.locale.value].cards.cardContent">
-        <CardComponent v-for="(card, index) in i18n.global.messages.value[i18n.global.locale.value].cards.cardContent" :key="card.id"
+      <div class="cards-container d-flex flex-column w-100" v-if="cards">
+        <CardComponent v-for="(card, index) in cards" :key="card.id"
         :cardData="card" :positionRight="index % 2 !== 0"/>
       </div>
 
@@ -19,8 +19,28 @@
 </template>
 
 <script setup lang="ts">
-import CardComponent from './components/card/CardComponent.vue';
+import { Ref, ref, onBeforeMount, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import i18n from '@/plugins/i18n';
+
+import CardComponent from './components/card/CardComponent.vue';
+import { IProject } from '@/interfaces/IProject.interface';
+
+  const { locale } = useI18n();
+  const cards: Ref<IProject[]> = ref([]);
+
+  onBeforeMount(() => {
+    cards.value = getCardsData();
+  })
+
+  watch(locale, () => {
+    cards.value = getCardsData();
+  })
+
+  const getCardsData = (): IProject[] => {
+    return i18n.global.messages.value[i18n.global.locale.value].cards.projects;
+  }
+
 </script>
 
 <style src="./HomeView.scss" scoped lang="scss"></style>

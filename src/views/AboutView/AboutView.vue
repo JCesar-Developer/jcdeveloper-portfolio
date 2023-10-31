@@ -68,7 +68,7 @@
 import { Ref, ref } from 'vue';
 import i18n from '@/plugins/i18n';
 
-import TextContainer from './components/text-container.vue';
+import TextContainer from '@/shared/TextContainer/text-container.vue';
 import TextSlider from './components/text-slider.vue';
 import PicturesGrid from './components/pictures-grid.vue';
 import SubjectSelector from './components/SubjectSelector/subject-selector.vue';

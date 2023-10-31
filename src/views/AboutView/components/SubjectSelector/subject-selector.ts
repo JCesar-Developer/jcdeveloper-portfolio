@@ -1,6 +1,6 @@
 import { Ref, ref, onBeforeMount, onMounted, watch, nextTick, defineComponent } from 'vue';
 import { IMoreDescription } from '@/interfaces/IAbout.interface';
-import TextContainer from '../text-container.vue';
+import TextContainer from '@/shared/TextContainer/text-container.vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({

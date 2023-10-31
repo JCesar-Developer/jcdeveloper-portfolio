@@ -52,7 +52,7 @@ watch(() => route.name, () => {
 });
 
 const setBgColor = (route: RouteRecordName | null | undefined ) => {  
-  if ( route !== 'study-case' ) bgColor.value = Background.primary;
+  if ( !route?.toString().includes( 'study-case' ) ) bgColor.value = Background.primary;
   else bgColor.value = Background.secondary;
 }
 
@@ -68,7 +68,7 @@ const onRouteEnter = (to: RouteLocationNormalizedLoaded, from: RouteLocationNorm
     slideMode.value = SlideMode.right;
     window.scrollTo(0, 0);
     next();
-  } else if ( to.name === 'study-case' ) {
+  } else if ( to.name?.toString().includes( 'study-case' )) {
     slideMode.value = SlideMode.up;
     window.scrollTo(0, 0);
     next();
@@ -87,6 +87,14 @@ router.beforeResolve(onRouteEnter)
 #main-container {
   transition: background-color .5s ease-in;
 
+  header {
+    z-index: 1;
+  }
+
+  main {
+    z-index: 0;
+  }
+
   @media (min-width: 540px) {
     overflow-x: hidden;
   }
@@ -102,7 +110,7 @@ router.beforeResolve(onRouteEnter)
       gap: 100px;
     }
     @media(max-width: 576px) {
-      gap: 80px;
+      gap:50px;
     }
   }
 }
@@ -118,7 +126,7 @@ router.beforeResolve(onRouteEnter)
 
 //slide-left-transition
 .slide-left-enter-active {
-  transition: opacity 1s ease-out, transform .5s ease-out;
+  transition: opacity 1s ease-in, transform .5s ease-out;
 }
 .slide-left-enter-from {
   transform: translateX(100%);
@@ -127,7 +135,7 @@ router.beforeResolve(onRouteEnter)
 
 //slide-right-trasition
 .slide-right-enter-active {
-  transition: opacity 1s ease-out, transform .5s ease-out;
+  transition: opacity 1s ease-in, transform .5s ease-out;
 }
 .slide-right-enter-from {
   transform: translateX(-100%);
@@ -136,7 +144,7 @@ router.beforeResolve(onRouteEnter)
 
 //slide-up-transition
 .slide-up-enter-active {
-  transition: opacity 1s ease-out, transform .5s ease-out;
+  transition: opacity 1s ease-in, transform .5s ease-out;
 }
 .slide-up-enter-from {
   transform: translateY(100%);

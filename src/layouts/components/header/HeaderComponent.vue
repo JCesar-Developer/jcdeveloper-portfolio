@@ -43,16 +43,16 @@ import { Background } from '@/interfaces/TBackground-colors.type';
   });
 
   const setBgColor = (route: RouteRecordName | null | undefined ) => {  
-    if ( window.innerWidth > 576 && route !== 'study-case' ) bgColor.value = Background.primary;
-    if ( window.innerWidth < 576 && route !== 'study-case' ) bgColor.value = Background.primaryTransparent;
-    if ( window.innerWidth > 576 && route === 'study-case' ) bgColor.value = Background.secondary;
-    if ( window.innerWidth < 576 && route === 'study-case' ) bgColor.value = Background.secondaryTransparent;
+    if ( window.innerWidth > 576 && !route?.toString().includes( 'study-case' )) bgColor.value = Background.primary;
+    if ( window.innerWidth < 576 && !route?.toString().includes( 'study-case' )) bgColor.value = Background.primaryTransparent;
+    if ( window.innerWidth > 576 && route?.toString().includes( 'study-case' )) bgColor.value = Background.secondary;
+    if ( window.innerWidth < 576 && route?.toString().includes( 'study-case' )) bgColor.value = Background.secondaryTransparent;
   }
 
   const setLanguage = ( lang: string ): void => {
     localStorage.setItem( 'lang', lang );
-    emit('fadePage'); 
     locale.value = lang;
+    emit( 'fadePage' ); 
   } 
 </script>
 
