@@ -8,6 +8,11 @@ export const locale_es = {
 		about: 'acerca de'
 	},
 
+  general: {
+    see_less: 'Ver menos...',
+    see_more: 'Ver más...',
+  },
+
 	presentation: {
 		welcome_msg: '¡Bienvenido!',
 		introduction: 'Mi nombre es Julio César, ingeniero UI/UX y desarrollador web Front End con más de un año de experiencia. Especializado principalmente en el diseño de experiencias de usuario con Angular y Vue.',
@@ -20,4 +25,8 @@ export const locale_es = {
   },
   
   about,
+
+  footer: {
+    resume: 'currículum',
+  }
 }

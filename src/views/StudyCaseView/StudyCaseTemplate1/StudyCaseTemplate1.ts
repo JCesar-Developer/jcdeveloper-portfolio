@@ -5,6 +5,7 @@ import i18n from '@/plugins/i18n';
 
 import SwiperGridImage from '@/shared/swiper-grid-img/swiper-grid-image.vue';
 import TextContainer from '@/shared/TextContainer/text-container.vue';
+import LinkButtons from '../components/link-buttons.vue';
 
 import { IProject } from '@/interfaces/project-interface/IProject.interface';
 import { IHero, ISolution, IProcessExplanation, IOutcome } from '@/interfaces/project-interface/IProject-content.interface';
@@ -13,6 +14,7 @@ export default defineComponent({
   components: {
     SwiperGridImage,
     TextContainer,
+    LinkButtons,
   },
   setup() {
     const route = useRoute();

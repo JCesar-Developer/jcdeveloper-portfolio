@@ -1,6 +1,8 @@
 <template >
   <div v-if="project" id="template-container" class="d-flex flex-column align-items-center">
 
+    <LinkButtons v-if="innerWidth > 576" :demoUrl="project.gitUrl" :gitUrl="project.gitUrl"/>
+
     <!-- PROVISIONAL-TITLE -->
     <div v-if="!hero" class="text-center">
       <div class="p3-r letter-spaced mb-2">{{ project.subtitle }}</div>

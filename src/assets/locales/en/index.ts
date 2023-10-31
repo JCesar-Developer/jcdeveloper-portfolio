@@ -8,6 +8,11 @@ export const locale_en = {
 		about: 'about'
 	},
 
+  general: {
+    see_less: 'See less...',
+    see_more: 'See more...',
+  },
+
   presentation: {
     welcome_msg: 'Welcome!',
     introduction: 'My name is Julio César, a UI/UX engineer and Front End web developer with over a year of experience. Specialized primarily in designing user experiences with Angular and Vue.',
@@ -20,4 +25,8 @@ export const locale_en = {
   },
 
   about,
+
+  footer: {
+    resume: 'resume',
+  }
 }
