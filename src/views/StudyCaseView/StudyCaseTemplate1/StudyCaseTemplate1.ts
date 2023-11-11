@@ -3,31 +3,36 @@ import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import i18n from '@/plugins/i18n';
 
-import SwiperGridImage from '@/shared/swiper-grid-img/swiper-grid-image.vue';
+//components
 import TextContainer from '@/shared/TextContainer/text-container.vue';
-import LinkButtons from '../components/link-buttons.vue';
+import HeroImage from '../components/hero-image.vue';
+import LinkButtons from '../components/link-buttons/link-buttons.vue';
+import MediaSelector from '../components/media-selector/media-selector.vue';
 
+//composables 
+import useProjectContents from '../composables/useProjectContents';
+
+//types
 import { IProject } from '@/interfaces/project-interface/IProject.interface';
-import { IHero, ISolution, IProcessExplanation, IOutcome } from '@/interfaces/project-interface/IProject-content.interface';
 
 export default defineComponent({
   components: {
-    SwiperGridImage,
     TextContainer,
+    HeroImage,
     LinkButtons,
+    MediaSelector,
   },
   setup() {
-    const route = useRoute();
-    const { locale } = useI18n();
+
+    // Variables
     const innerWidth = computed(() => window.innerWidth);
     const project: Ref<IProject | undefined> = ref(undefined);
 
-    // Project contents
-    const hero = ref<IHero | undefined>(undefined);
-    const solution = ref<ISolution | undefined>(undefined);
-    const processImgs = ref<string[] | undefined>(undefined);
-    const processExplanation = ref<IProcessExplanation | undefined>(undefined);
-    const outcome = ref<IOutcome | undefined>(undefined);
+    // Composables
+    const route = useRoute();
+    const { locale } = useI18n();
+    const { updateProjectContents, projectContent, hero, tags, description1, multimedia1, description2, multimedia2, description3, multimedia3, outcome } = useProjectContents();
+
 
     onBeforeMount(() => {
       project.value = getProjectData();
@@ -45,21 +50,19 @@ export default defineComponent({
       return cards.find((project: IProject) => project.id === id);
     };
 
-    const updateProjectContents = (project: IProject) => {
-      hero.value = project.projectContent.hero;
-      solution.value = project.projectContent.solution;
-      processImgs.value = project.projectContent.process;
-      processExplanation.value = project.projectContent.process_explanation;
-      outcome.value = project.projectContent.outcome;
-    };
-
     return {
       innerWidth,
       project,
+
+      projectContent,
       hero,
-      solution,
-      processImgs,
-      processExplanation,
+      tags,
+      description1,
+      multimedia1,
+      description2,
+      multimedia2,
+      description3,
+      multimedia3,
       outcome,
     };
   },

@@ -1,11 +1,10 @@
 import { IProject } from "@/interfaces/project-interface/IProject.interface"
 import Template from "@/interfaces/Templates.type"
 
-export const project1: IProject =  {
+export const mmc: IProject =  {
   id: '1',
   title: 'MMC Backoffice',
-  subtitle: '',
-
+  overtitle: '',
   cardContent: {
     image: require('@/assets/images/mmc-app.jpg'),
     description: {
@@ -17,8 +16,8 @@ export const project1: IProject =  {
       <strong>(User): </strong> Purchase tickets for recreational events through the online platform.`,
     }
   },
+  template: Template.template1,
 
-  projectContent: {
-    template: Template.template1,
-  }
+  //projectContent: {
+  //}
 }

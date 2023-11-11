@@ -3,7 +3,9 @@
 		<div class="header thin-container d-flex flex-column flex-md-row align-items-center justify-content-between">
 
       <!-- Logo -->
-			<div class="logo dancing">JC Developer</div>
+      <router-link :to="{ name: 'home' }">
+        <div class="logo dancing">JC Developer</div>
+      </router-link>
 			
       <!-- Nav-bar -->
 			<nav class="d-flex flex-row">

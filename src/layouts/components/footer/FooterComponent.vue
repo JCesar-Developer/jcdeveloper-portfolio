@@ -4,9 +4,9 @@
       <span class="garamond">julioasto.92@gmail.com</span>
 		
       <nav class="nav-options d-flex flex-row">
-        <a class="hover-bold hover-o-500" href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">linked-in</a>
-        <a class="hover-bold hover-o-500" :href="cv_url" target="_blank">{{ $t( 'footer.resume' ) }}</a>
-        <a class="hover-bold hover-o-500" href="https://github.com/JCesar-Developer" target="_blank">github</a>
+        <a class="link" href="https://www.linkedin.com/in/julio-c%C3%A9sar-developer/" target="_blank">linked-in</a>
+        <a class="link" :href="cv_url" target="_blank">{{ $t( 'footer.resume' ) }}</a>
+        <a class="link" href="https://github.com/JCesar-Developer" target="_blank">github</a>
       </nav>
     </div>
 	</footer>
@@ -24,4 +24,29 @@ onBeforeMount(() => {
 })
 </script>
 
-<style src="./FooterComponent.scss" scoped lang="scss"></style>
+<style scoped lang="scss">
+@import '@/styles/color.scss';
+
+#footer-component {
+  .footer {
+    gap: 20px;
+    margin-bottom: 80px;
+
+    .garamond {
+      font-size: 18px;
+    }
+
+    .nav-options {
+      gap: 40px;
+      a { transition: all .2s ease-in-out; }
+
+      .link:hover {
+        color: $o-500;
+        transform: scale(1.1);
+      }
+
+    }
+  }
+
+}
+</style>

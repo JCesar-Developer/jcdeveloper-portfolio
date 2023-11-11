@@ -32,8 +32,8 @@ import { Ref, ref, defineProps, PropType, onBeforeMount } from 'vue';
   }
 
   .image {
-    width: 150px;
-    height: 180px;
+    width: 160px;
+    aspect-ratio: 1/1.5;
     box-sizing: border-box;
     padding: 0px 5px 5px 0px;
     object-fit: cover;
