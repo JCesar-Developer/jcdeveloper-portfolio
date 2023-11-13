@@ -18,8 +18,15 @@
     <template v-else>
 
       <!-- HERO -->
-      <section class="center">
+      <section class="d-flex flex-column align-items-center">
         <HeroImage v-if="hero" :image="hero"/>
+
+        <!-- tags -->
+        <div v-if="tags" id="tags-container" class="sm-continer row w-100 justify-content-center mt-4">
+          <div class="d-flex flex-row flex-wrap col-12 col-lg-8 p-0 gap-2 justify-content-center">
+            <TagComponent v-for="(tag, index) in tags" :key="index" :tag="tag" />
+          </div>
+        </div>
       </section>
 
       <!-- DESCRIPTION 1 -->
@@ -37,8 +44,10 @@
       </section>
 
       <!-- MULTIMEDIA 1 -->
-      <section v-if="multimedia1" class="row sm-container justify-content-center">
-        <MediaSelector :multimedia="multimedia1"/>
+      <section v-if="multimedia1" class="sm-container row justify-content-center">
+        <div class="col-12 col-lg-8 p-0">
+          <MediaSelector :multimedia="multimedia1"/>
+        </div>
       </section>
 
       <!-- DESCRIPTION 2 -->
@@ -50,8 +59,8 @@
           </TextContainer>
 
           <div class="row justify-content-end">
-            <div class="col-12 col-sm-9 p-0">
-              <p class="p2-r" v-html="description2.text"></p>
+            <div class="col-12 col-sm-9">
+              <p class="ul-margin p2-r" v-html="description2.text"></p>
             </div>
           </div>
 
@@ -59,28 +68,29 @@
       </section>
 
       <!-- MULTIMEDIA 2 -->
-      <section v-if="multimedia2" id="multimedia-2" class="sm-container">
-        <MediaSelector :multimedia="multimedia2"/>
+      <section v-if="multimedia2" class="sm-container row justify-content-center">
+        <div class="col-12 col-lg-8 p-0">
+          <MediaSelector :multimedia="multimedia2"/>
+        </div>
       </section>
 
       <!-- DESCRIPTION 3 -->
-      <section v-if="description3" id="description-3" class="sm-container row justify-content-center">
+      <section v-if="description3" class="sm-container row justify-content-center">
         <div class="col-12 col-lg-8 row gap-3 gap-sm-0 p-0">
           
           <h4 class="h4 col-sm-4 p-0 pe-sm-4" v-html="description3.highlight_text"></h4>
-          <p class="p2-r col-sm-8 p-0 ps-sm-2" v-html="description3.text"></p>
+          <p class="ul-margin p2-r col-sm-8 p-0 ps-sm-2" v-html="description3.text"></p>
           
         </div>      
       </section>
       
       <!-- MULTIMEDIA 3 -->
-      <section v-if="multimedia3" class="row justify-content-center">
+      <section id="multimedia-3" v-if="multimedia3">
         <MediaSelector :multimedia="multimedia3"/>
       </section>
 
-
       <!-- OUTCOME -->
-      <section v-if="outcome" id="section-outcome" class="row justify-content-center">
+      <section v-if="outcome" class="row justify-content-center">
         <TextContainer :title="outcome.title" uppercase class="sm-container col-sm-9 col-lg-7 p-0 g-0">
           <div class="p2-r" v-html="outcome.text"></div>
         </TextContainer>

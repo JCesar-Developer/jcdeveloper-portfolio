@@ -83,5 +83,11 @@ const formatChildren = () => {
       }
     }
   }
+
+  @media (max-width: 540px) {
+    #swiper {
+      max-width: 75vw;
+    }
+  }
 }
 </style>

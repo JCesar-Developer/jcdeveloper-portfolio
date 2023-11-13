@@ -1,8 +1,9 @@
 import { IProject } from "@/interfaces/project-interface/IProject.interface"
+import { Tag } from '@/interfaces/project-interface/tags.enum';
 import Template from "@/interfaces/Templates.type"
 
 export const portfolio: IProject =  {
-  id: '2',
+  id: 'portfolio',
   title: 'Portfolio',
   overtitle: 'Personal Website - 2023',
   gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
@@ -19,6 +20,16 @@ export const portfolio: IProject =  {
 
   projectContent: {
     hero: require('@/assets/images/projects/portfolio/hero.png'),
+
+    tags: [
+      Tag.Figma,
+      Tag.Canva,
+      Tag.Vue,
+      Tag.Bootstrap,
+      Tag.TypeScript,
+      Tag.Production,
+    ],
+
     description_1: {
       title: "Authors",
       text: "Julio César",
@@ -41,7 +52,7 @@ export const portfolio: IProject =  {
       `,
       highlight_text: "First and foremost, it was necessary to know the target audience for the portfolio, as well as to have clear objectives for it. Once the different scenarios were outlined, it would be determined which proposals would mark the main objectives of the project:"
     },
-    multimedia_2: {
+    multimedia_3: {
       imageGrid: [
         require('@/assets/images/projects/portfolio/process1.png'),
         require('@/assets/images/projects/portfolio/process2.jpg'),
@@ -54,12 +65,14 @@ export const portfolio: IProject =  {
     outcome: {
       title: "Result",
       text: `
-        I wanted to develop a portfolio that stood out, especially for the detailed exposure of my different projects, emphasizing the challenging design and development processes that characterize them.
-        <br><br>
-        The design of a project is an extensive process that requires making a series of important decisions related to the balance between a pleasant interface and the best possible user experience. And, far from ending with the product delivery; I discovered that it evolves throughout the project's development.
-        <br><br>
-        Thus, both design and development are iterative processes. Design sets the product path, and development modifies the design to adapt it to the software's needs and features. It is in this constant give-and-take of continuous growth that the magic of creating a digital product resides.
-        <br><br>
+        I wanted to develop a portfolio that stood out, especially for the detailed exposure of my different projects, emphasizing the challenging design and development processes that characterize them.<br><br>
+
+
+        The design of a project is an extensive process that requires making a series of important decisions related to the balance between a pleasant interface and the best possible user experience. And, far from ending with the product delivery; I discovered that it evolves throughout the project's development.<br><br>
+
+
+        Thus, both design and development are iterative processes. Design sets the product path, and development modifies the design to adapt it to the software's needs and features. It is in this constant give-and-take of continuous growth that the magic of creating a digital product resides. <br><br>
+
         With this project, I learned that design is not a static product, and despite its challenging decision-making processes, a design looking good on paper or in Figma doesn't necessarily make it the best final product. It is also prone to change, evolution, and improvement. In summary, I am very satisfied to have carried out this project and to have learned so much from it.
       `
     }

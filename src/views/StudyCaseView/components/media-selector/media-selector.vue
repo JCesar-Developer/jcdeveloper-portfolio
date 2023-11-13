@@ -1,7 +1,8 @@
 <template>
   <SingleImage v-if="multimedia.singleImage" :image="multimedia.singleImage"/>
   <ImageGrid v-if="multimedia.imageGrid" :images="multimedia.imageGrid"/>
-  <ImageOverlay v-if="multimedia.imageOverlay" :image="multimedia.imageOverlay"/>
+  <ImageOverlay v-if="multimedia.imageOverlay" :images="multimedia.imageOverlay"/>
+  <Video v-if="multimedia.video" :src="multimedia.video"></Video>
 </template>
 
 <script setup lang="ts">
@@ -10,6 +11,7 @@ import { IMultimedia } from '@/interfaces/project-interface/IProject-content.int
 import SingleImage from './single-image.vue';
 import ImageGrid from './image-grid.vue';
 import ImageOverlay from './image-overlay.vue';
+import Video from './video.vue';
 defineProps({
   multimedia: { type: Object as PropType<IMultimedia>, required: true }
 })

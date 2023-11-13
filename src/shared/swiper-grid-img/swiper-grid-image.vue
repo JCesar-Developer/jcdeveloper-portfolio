@@ -1,5 +1,5 @@
 <template >
-  <div class="image-grid" :style="`--image-count: ${imageCount!}`" :class="{'even-images': images.length % 2 === 0, 'odd-images': images.length % 2 !== 0}">
+  <div id="image-grid" :style="`--image-count: ${imageCount!}`" :class="{'even-images': images.length % 2 === 0, 'odd-images': images.length % 2 !== 0}">
 
     <img v-for="(image, index) in images" :key="index" :src="image" alt="Process image" class="image" />
   
@@ -18,7 +18,7 @@ import { Ref, ref, defineProps, PropType, onBeforeMount } from 'vue';
 </script>
 
 <style lang="scss">
-.image-grid {
+#image-grid {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   width: 100%;

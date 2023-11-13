@@ -1,6 +1,8 @@
 // Often-used-utilities -------------------------------------------------------------
 strong {
-  font-weight: bold !important;
+  font-weight: 600;
+  font-size: inherit;
+  font-family: inherit;
 }
 .fit-content {
   width: fit-content;
@@ -59,10 +61,11 @@ strong {
 	flex-direction: row;
 	justify-content: center;
 }
-.ul-format {
-  ul {
-    padding-left: 15px !important;
-  }
+.ul-padding ul {
+  padding-left: 15px !important;
+}
+.ul-margin ul {
+  margin: 0px !important;
 }
 .text-title {
   font-weight: 700 !important;

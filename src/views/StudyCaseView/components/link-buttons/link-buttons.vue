@@ -6,7 +6,7 @@
         <div class="link-btn-container">
           <p class="hidden-text p2-r">Home</p>
           <HomeSvg :stroke-color="strokeColor" />
-      </div>
+        </div>
       </router-link>
       
 
@@ -43,13 +43,14 @@ import GithubSvg from './github-svg.vue'
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 #link-btns {
   position: fixed;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   gap: 12px;
+  z-index: 1;
 
   .link-btn-container {
     box-sizing: border-box;

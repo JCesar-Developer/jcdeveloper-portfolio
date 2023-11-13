@@ -4,8 +4,9 @@ import { useI18n } from 'vue-i18n';
 import i18n from '@/plugins/i18n';
 
 //components
-import TextContainer from '@/shared/TextContainer/text-container.vue';
 import HeroImage from '../components/hero-image.vue';
+import TagComponent from '@/shared/tag.component.vue';
+import TextContainer from '@/shared/TextContainer/text-container.vue';
 import LinkButtons from '../components/link-buttons/link-buttons.vue';
 import MediaSelector from '../components/media-selector/media-selector.vue';
 
@@ -17,8 +18,9 @@ import { IProject } from '@/interfaces/project-interface/IProject.interface';
 
 export default defineComponent({
   components: {
-    TextContainer,
+    TagComponent,
     HeroImage,
+    TextContainer,
     LinkButtons,
     MediaSelector,
   },
@@ -45,9 +47,9 @@ export default defineComponent({
     });
 
     const getProjectData = (): IProject | undefined => {
-      const id: string = route.params.id[0];
+      const paramsId: string = route.params.id as string;
       const cards: IProject[] = i18n.global.messages.value[i18n.global.locale.value].cards.projects;
-      return cards.find((project: IProject) => project.id === id);
+      return cards.find((project: IProject) => project.id == paramsId);
     };
 
     return {

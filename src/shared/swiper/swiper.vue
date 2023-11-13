@@ -93,15 +93,9 @@ import { ref, onMounted, defineEmits, defineProps, onUpdated, watch } from 'vue'
   overflow: hidden;
 }
 
-@media (max-width: 540px) {
-  #swiper {
-    max-width: 75vw;
-  }
-}
-
 #swiper-wrapper {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   transition: transform 0.3s;
 }
 </style>

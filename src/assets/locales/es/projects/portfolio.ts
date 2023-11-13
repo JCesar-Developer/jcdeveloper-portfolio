@@ -1,8 +1,9 @@
 import { IProject } from "@/interfaces/project-interface/IProject.interface"
+import { Tag } from '@/interfaces/project-interface/tags.enum';
 import Template from "@/interfaces/Templates.type"
 
 export const portfolio: IProject =  {
-  id: '2',
+  id: 'portfolio',
   title: 'Portafolio',
   overtitle: 'Website personal - 2023',
   gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
@@ -19,6 +20,16 @@ export const portfolio: IProject =  {
 
   projectContent: {
     hero: require('@/assets/images/projects/portfolio/hero.png'),
+
+    tags: [
+      Tag.Figma,
+      Tag.Canva,
+      Tag.Vue,
+      Tag.Bootstrap,
+      Tag.TypeScript,
+      Tag.Production,
+    ],
+
     description_1: {
       title: 'Autores',
       text: 'Julio César',
@@ -44,7 +55,7 @@ export const portfolio: IProject =  {
       highlight_text: 'Primero que nada, era necesario conocer la audiencia a la que iba dirigida el portafolio, así como tener claros los objetivos que se querían alcanzar con el mismo. Una vez planteadas las diferentes casuísticas, se terminaría determinando cuáles de todas las propuestas demarcarían los objetivos principales del proyecto:',
     },
 
-    multimedia_2: {
+    multimedia_3: {
       imageGrid: [
         require('@/assets/images/projects/portfolio/process1.png'),
         require('@/assets/images/projects/portfolio/process2.jpg'),

@@ -1,6 +1,8 @@
+import { Tag } from './tags.enum';
+
 export interface IProjectContent {
   hero?: string;
-  tags?: string[];
+  tags?: Tag[];
   description_1?: IDescription;
   multimedia_1?: IMultimedia;
   description_2?: IDescription;
@@ -17,6 +19,7 @@ export interface IDescription {
 }
 
 export interface IMultimedia {
+  video?: string;
   singleImage?: string;
   imageGrid?: string[];
   imageOverlay?: string[];

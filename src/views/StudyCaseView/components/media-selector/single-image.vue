@@ -1,5 +1,5 @@
 <template>
-  <img :src="image" :alt="alt" class="col-12 col-lg-8 p-0"/>
+  <img :src="image" :alt="alt" class="w-100 col-12 col-lg-8 p-0"/>
 </template>
 
 <script setup lang="ts">

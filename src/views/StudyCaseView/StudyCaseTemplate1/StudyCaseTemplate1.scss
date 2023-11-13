@@ -30,6 +30,10 @@
     }
   }
 
+  //#tags-container {
+  //  //display: flex;
+  //}
+
   //DESCRIPTION-1
   #description-1 {
     #text-container { gap: 0px }
@@ -40,17 +44,8 @@
     }
   }
 
-  //SECTION: PROCESS
-  #multimedia-2 {
+  #multimedia-3 {
     max-width: 900px;
+    //margin: 0 auto;
   }
-
-  //SECTION: TESTIMONIALS
-  //#multimedia-3 {
-  //  img {
-  //    width: 100%;
-  //    max-width: 900px;
-  //    object-fit: cover;
-  //  }
-  //}
 }
