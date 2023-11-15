@@ -9,14 +9,14 @@ export const mmc: IProject =  {
   gitUrl: 'https://github.com/JCesar-Developer/mmc-app',
 
   cardContent: {
-    image: require('@/assets/images/mmc-app.jpg'),
+    image: require('@/assets/images/projects/mmc/card.jpg'),
     description: {
-      title: 'Angular 15 + Bootstrap',
+      title: 'Angular 15 + RxJS + WebSockets',
       text: `Panel de control para empresa Mobile Media Content. Funcionalidad por roles: 
       <br/><br/>
       <strong>(Admin): </strong> Gestionar cuentas de usuarios. Y seguimiento estadístico de ventas online. 
       <br/> <br/>
-      <strong>(User): </strong> Compra de entradas (tickets) a eventos recreativos a través de su plataforma online.`,
+      <strong>(User): </strong> Registro de venta de entradas (tickets) a eventos recreativos y edición de los datos así como del perfil de usuario.`,
     }
   },
 
@@ -60,7 +60,7 @@ export const mmc: IProject =  {
       `
     },
 
-    multimedia_3: {
+    large_multimedia: {
       imageOverlay: [
         require('@/assets/images/projects/mmc/page1.jpg'),
         require('@/assets/images/projects/mmc/page2.jpg'),

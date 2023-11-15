@@ -9,6 +9,7 @@ export interface IProjectContent {
   multimedia_2?: IMultimedia;
   description_3?: IDescription;
   multimedia_3?: IMultimedia;
+  large_multimedia?: IMultimedia;
   outcome?: IDescription;
 }
 

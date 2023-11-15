@@ -9,10 +9,10 @@ export const ngMusic: IProject =  {
   gitUrl: 'https://github.com/JCesar-Developer/ngMusicPlayer',
 
   cardContent: {
-    image: require('@/assets/images/ng-music-player.jpg'),
+    image: require('@/assets/images/projects/ngMusic/card.jpg'),
     description: {
-      title: 'Angular 13 + Firebase',
-      text: 'Aplicación web para escuchar música online. <br/><br/> Cuenta con un reproductor de música, se puede crear una cuenta de usuario para guardar las canciones favoritas y crear listas de reproducción personalizadas.',
+      title: 'Angular 13 + Firebase + DevOps',
+      text: 'Aplicación web para escuchar música online. <br/><br/> Cuenta con un reproductor de música, se puede crear listas de reproducción personalizadas, almacenar tus canciones online y editar los datos de cada una de tus canciones favoritas.',
     }
   },
   
@@ -25,6 +25,7 @@ export const ngMusic: IProject =  {
       Tag.Figma,
       Tag.Angular,
       Tag.Firebase,
+      Tag.JavaScript,
       Tag.HTTP,
       Tag.DevOps,
       Tag.Trello,
@@ -75,7 +76,7 @@ export const ngMusic: IProject =  {
       `,
     },
 
-    multimedia_3: {
+    large_multimedia: {
       singleImage: require('@/assets/images/projects/ngMusic/trello.jpg'),
     },
 

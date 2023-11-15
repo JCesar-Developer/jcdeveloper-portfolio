@@ -83,10 +83,17 @@
           
         </div>      
       </section>
-      
+
       <!-- MULTIMEDIA 3 -->
-      <section id="multimedia-3" v-if="multimedia3">
-        <MediaSelector :multimedia="multimedia3"/>
+      <section v-if="multimedia3" class="sm-container row justify-content-center">
+        <div class="col-12 col-lg-8 p-0">
+          <MediaSelector :multimedia="multimedia3"/>
+        </div>
+      </section>
+      
+      <!-- LARGE MULTIMEDIA -->
+      <section id="large-multimedia" v-if="largeMultimedia">
+        <MediaSelector :multimedia="largeMultimedia"/>
       </section>
 
       <!-- OUTCOME -->

@@ -3,10 +3,23 @@ export enum Tag {
   Figma       = 'Figma',
   Canva       = 'Canva',
 
+  //Type of web
+  SPA         = 'SPA',
+  PWA         = 'PWA',
+  SSR         = 'SSR',
+
   //Frontend
   Angular     = 'Angular',
   RxJS        = 'RxJS',
   Vue         = 'Vue',
+  Nuxt        = 'Nuxt',
+
+  //Vue
+  CompositionAPI = 'CompositionAPI',
+
+  //Store management
+  Vuex        = 'Vuex',
+  Pinia       = 'Pinia',
   
   //Styles
   Bootstrap   = 'Bootstrap',
@@ -34,4 +47,6 @@ export enum Tag {
   //Kind of project
   Academic    = 'Academic project',
   Production  = 'Production project',
+  Personal    = 'Personal project',
+  Hackaton    = 'Hackaton project',
 }

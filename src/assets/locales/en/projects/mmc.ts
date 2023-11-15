@@ -9,14 +9,14 @@ export const mmc: IProject =  {
   gitUrl: 'https://github.com/JCesar-Developer/mmc-app',
 
   cardContent: {
-    image: require('@/assets/images/mmc-app.jpg'),
+    image: require('@/assets/images/projects/mmc/card.jpg'),
     description: {
-      title: 'Angular 15 + Bootstrap',
-      text: `Control panel for Mobile Media Content company. Role-based functionality: 
+      title: 'Angular 15 + RxJS + WebSockets',
+      text: `Control panel for Mobile Media Content company. Functionality based on roles:
       <br/><br/>
-      <strong>(Admin): </strong> Manage user accounts and track online sales statistics. 
-      <br/> <br/>
-      <strong>(User): </strong> Purchase tickets for recreational events through the online platform.`,
+      <strong>(Admin): </strong> Manage user accounts and track online sales statistics.
+      <br/><br/>
+      <strong>(User): </strong> Record sales of tickets for recreational events and edit user profile data.`,
     }
   },
   template: Template.template1,
@@ -59,7 +59,7 @@ export const mmc: IProject =  {
       `,
     },
   
-    multimedia_3: {
+    large_multimedia: {
       imageOverlay: [
         require('@/assets/images/projects/mmc/page1.jpg'),
         require('@/assets/images/projects/mmc/page2.jpg'),
@@ -69,7 +69,7 @@ export const mmc: IProject =  {
     },
   
     outcome: {
-      title: 'Result',
+      title: 'Outcome',
       text: `After fixing some bugs found by the client during the production phase, a perfectly functional application has been obtained according to the client's requirements.<br><br>
   
       Also, the decision to use the Angular framework and a modular architecture makes it easy to understand and read the application. This will significantly reduce technical debt if, in the future, I or future developers decide to implement new functionalities.`,

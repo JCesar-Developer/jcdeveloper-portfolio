@@ -9,11 +9,11 @@ export const portfolio: IProject =  {
   gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
   
   cardContent: {
-    image: require('@/assets/images/portfolio.jpg'),
+    image: require('@/assets/images/projects/portfolio/card.jpg'),
     description: {
-      title: 'Figma + Vue3 + Bootstrap',
+      title: 'Figma + Vue 3 + TypeScript + CompositionAPI',
       text: 'Explore the design and development process of my personal website and the decisions I made to bring it to life.',
-    }
+    }    
   },
 
   template: Template.template1,
@@ -52,7 +52,7 @@ export const portfolio: IProject =  {
       `,
       highlight_text: "First and foremost, it was necessary to know the target audience for the portfolio, as well as to have clear objectives for it. Once the different scenarios were outlined, it would be determined which proposals would mark the main objectives of the project:"
     },
-    multimedia_3: {
+    large_multimedia: {
       imageGrid: [
         require('@/assets/images/projects/portfolio/process1.png'),
         require('@/assets/images/projects/portfolio/process2.jpg'),
@@ -63,7 +63,7 @@ export const portfolio: IProject =  {
       ]
     },
     outcome: {
-      title: "Result",
+      title: "Outcome",
       text: `
         I wanted to develop a portfolio that stood out, especially for the detailed exposure of my different projects, emphasizing the challenging design and development processes that characterize them.<br><br>
 

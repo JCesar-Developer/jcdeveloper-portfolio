@@ -33,7 +33,7 @@ export default defineComponent({
     // Composables
     const route = useRoute();
     const { locale } = useI18n();
-    const { updateProjectContents, projectContent, hero, tags, description1, multimedia1, description2, multimedia2, description3, multimedia3, outcome } = useProjectContents();
+    const { updateProjectContents, projectContent, hero, tags, description1, multimedia1, description2, multimedia2, description3, multimedia3, largeMultimedia, outcome } = useProjectContents();
 
 
     onBeforeMount(() => {
@@ -65,6 +65,7 @@ export default defineComponent({
       multimedia2,
       description3,
       multimedia3,
+      largeMultimedia,
       outcome,
     };
   },

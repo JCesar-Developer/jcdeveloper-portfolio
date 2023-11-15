@@ -14,6 +14,7 @@ export default function useProjectContents() {
   const multimedia2 = ref<IMultimedia | undefined>(undefined);
   const description3 = ref<IDescription | undefined>(undefined);
   const multimedia3 = ref<IMultimedia | undefined>(undefined);
+  const largeMultimedia = ref<IMultimedia | undefined>(undefined);
   const outcome = ref<IDescription | undefined>(undefined);
 
   const updateProjectContents = (project: IProject): void => {
@@ -26,6 +27,7 @@ export default function useProjectContents() {
     multimedia2.value = projectContent.value?.multimedia_2;
     description3.value = projectContent.value?.description_3;
     multimedia3.value = projectContent.value?.multimedia_3;
+    largeMultimedia.value = projectContent.value?.large_multimedia;
     outcome.value = projectContent.value?.outcome;
   };
 
@@ -40,6 +42,7 @@ export default function useProjectContents() {
     multimedia2,
     description3,
     multimedia3,
+    largeMultimedia,
     outcome,
   }
 

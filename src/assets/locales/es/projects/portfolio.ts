@@ -9,9 +9,9 @@ export const portfolio: IProject =  {
   gitUrl: 'https://github.com/JulitoxD/jcdeveloper-portfolio',
   
   cardContent: {
-    image: require('@/assets/images/portfolio.jpg'),
+    image: require('@/assets/images/projects/portfolio/card.jpg'),
     description: {
-      title: 'Figma + Vue3 + Bootstrap',
+      title: 'Figma + Vue 3 + TypeScript + CompositionAPI',
       text: 'Conoce el proceso de diseño y desarrollo de mi página web personal y las decisiones que tomé para llevarla a cabo.',
     }
   },
@@ -55,7 +55,7 @@ export const portfolio: IProject =  {
       highlight_text: 'Primero que nada, era necesario conocer la audiencia a la que iba dirigida el portafolio, así como tener claros los objetivos que se querían alcanzar con el mismo. Una vez planteadas las diferentes casuísticas, se terminaría determinando cuáles de todas las propuestas demarcarían los objetivos principales del proyecto:',
     },
 
-    multimedia_3: {
+    large_multimedia: {
       imageGrid: [
         require('@/assets/images/projects/portfolio/process1.png'),
         require('@/assets/images/projects/portfolio/process2.jpg'),
