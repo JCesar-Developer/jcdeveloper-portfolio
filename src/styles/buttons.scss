@@ -12,7 +12,14 @@
   }
 
   &.btn-secondary {
+    background-color: $o-500;
+    a {
+      color: $bg-900;
+      font-weight: 400;
+    }
+  }
+
+  &.btn-tertiary {
     background-color: $bg-500;
-    color: white;
   }
 }

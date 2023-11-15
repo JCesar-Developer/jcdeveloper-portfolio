@@ -24,7 +24,12 @@
             {{ $t( 'cards.read_more' ) }}
           </router-link>
         </li>
-        <li>
+        <li v-if="cardData.demoUrl" >
+          <a :href="cardData.demoUrl" class="link p2-r t-gray hover-bold hover-o-500" target="_blank">
+            {{ $t( 'cards.demo' ) }}
+          </a>
+        </li>
+        <li v-if="cardData.gitUrl">
           <a :href="cardData.gitUrl" class="link p2-r t-gray hover-bold hover-o-500" target="_blank">
             {{ $t( 'cards.source_code' ) }}
           </a>
@@ -39,11 +44,18 @@
           {{ $t( 'cards.read_more' ) }}
         </button>
       </router-link>
-      <button class="btn btn-secondary">
-        <a :href="cardData.gitUrl" target="_blank">
-          {{ $t( 'cards.source_code' ) }}
+      <button v-if="cardData.demoUrl" class="btn btn-secondary">
+        <a :href="cardData.demoUrl" target="_blank">
+          {{ $t( 'cards.demo' ) }}
         </a>
       </button>
+      <template v-if="cardData.gitUrl">
+        <button class="btn btn-tertiary">
+          <a :href="cardData.gitUrl" target="_blank">
+            {{ $t( 'cards.source_code' ) }}
+          </a>
+        </button>
+      </template>
     </div>
 
 	</div>

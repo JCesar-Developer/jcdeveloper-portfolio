@@ -21,6 +21,7 @@ export const locale_es = {
 	
   cards: {
     read_more: 'Leer estudio del caso >',
+    demo: 'Mira la demo del proyecto >',
     source_code: 'Ver código fuente >',
     projects,
   },

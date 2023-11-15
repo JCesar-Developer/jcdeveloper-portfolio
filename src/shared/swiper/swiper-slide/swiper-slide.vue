@@ -1,7 +1,9 @@
 <template>
   <div class="swiper-slide unselectable" :style="{ width: `${slideWidth}px` }">
-      <slot></slot>
-  </div>
+
+    <slot></slot>
+
+</div>
 </template>
 
 <script setup lang="ts">

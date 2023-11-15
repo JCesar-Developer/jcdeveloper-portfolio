@@ -1,17 +1,23 @@
 <template>
   <div id="swiper" ref="swiperRef" @mousedown="startSwipe" @mousemove="swipe" @mouseup="endSwipe" @mouseleave="endSwipe" @touchstart="startSwipe" @touchmove="swipe" @touchend="endSwipe">
+
+    <LeftArrow v-if="hasButtons" @click="prevSlide" id="left-arrow" class="arrow"/>
+
     <div id="swiper-wrapper" :style="{ transform: `translateX(-${currentIndex * slideWidth!}px)` }">
-      
       <slot></slot>
-    
     </div>
-  </div>
+
+    <RigthArrow v-if="hasButtons" @click="nextSlide" id="right-arrow" class="arrow"/>
+
+</div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, defineEmits, defineProps, onUpdated, watch } from 'vue';
+import LeftArrow from './left-arrow.vue';
+import RigthArrow from './rigth-arrow.vue';
   
-  const props = defineProps(['textId'])
+  const props = defineProps(['textId', 'hasButtons'])
   const emit = defineEmits(['onSlideChange']);
 
   const swiperRef     = ref<HTMLElement | null>(null);
@@ -87,15 +93,37 @@ import { ref, onMounted, defineEmits, defineProps, onUpdated, watch } from 'vue'
   };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #swiper {
   position: relative;
   overflow: hidden;
-}
 
-#swiper-wrapper {
-  display: flex;
-  max-width: 100%;
-  transition: transform 0.3s;
+  .arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    height: 25px;
+    width: 25px;
+    opacity: 0.2;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+
+    &#left-arrow {
+      left: 2.5px;
+    }
+    &#right-arrow {
+      right: 2.5px;
+    }
+    &:hover {
+        opacity: 1;
+    }
+  }
+
+  #swiper-wrapper {
+    display: flex;
+    max-width: 100%;
+    transition: transform 0.3s;
+  }
+
 }
 </style>

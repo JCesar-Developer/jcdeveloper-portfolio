@@ -24,7 +24,7 @@ import { useI18n } from 'vue-i18n';
 import i18n from '@/plugins/i18n';
 
 import CardComponent from './components/card/CardComponent.vue';
-import { IProject } from '@/interfaces/IProject.interface';
+import { IProject } from '@/interfaces/project-interface/IProject.interface';
 
   const { locale } = useI18n();
   const cards: Ref<IProject[]> = ref([]);

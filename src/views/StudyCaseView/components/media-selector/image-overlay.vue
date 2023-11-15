@@ -1,7 +1,7 @@
 <template>
 
   <template v-if="innerWidth < 576">
-    <Swiper>
+    <Swiper :has-buttons="true">
       <SwiperSlide v-for="(image, index) of images" :key="index">
         <img :src="image" alt="Grid image"/>
       </SwiperSlide>
