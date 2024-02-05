@@ -1,31 +1,3 @@
-<template>
-  <div id="main-container" class="center" :class="bgColor">
-    
-    <transition name="fade">
-      <div v-if="fadePage" class="main-content d-flex flex-column">
-
-        <!-- Header -->
-        <HeaderComponent @fade-page="onFadePage()" />
-
-        <!-- Main -->
-        <main class="center">
-          <router-view v-slot="{ Component }">
-            <transition :name="slideMode">
-              <component class="thin-container" :is="Component" />
-            </transition>
-          </router-view>
-        </main>
-
-        <!-- Footer -->
-        <FooterComponent />
-
-      </div>
-    </transition>
-
-  </div>
-</template>
-
-<!-- SCRIPT -->
 <script setup lang="ts">
 import { RouteLocationNormalizedLoaded, RouteRecordName, useRoute, useRouter } from 'vue-router';
 import { watch, ref, Ref, onBeforeMount } from 'vue';
@@ -81,6 +53,33 @@ const onRouteEnter = (to: RouteLocationNormalizedLoaded, from: RouteLocationNorm
 
 router.beforeResolve(onRouteEnter)
 </script>
+
+<template>
+  <div id="main-container" class="center" :class="bgColor">
+    
+    <transition name="fade">
+      <div v-if="fadePage" class="main-content d-flex flex-column">
+
+        <!-- Header -->
+        <HeaderComponent @fade-page="onFadePage()" />
+
+        <!-- Main -->
+        <main class="center">
+          <router-view v-slot="{ Component }">
+            <transition :name="slideMode">
+              <component class="thin-container" :is="Component" />
+            </transition>
+          </router-view>
+        </main>
+
+        <!-- Footer -->
+        <FooterComponent />
+
+      </div>
+    </transition>
+
+  </div>
+</template>
 
 <!-- STYLE -->
 <style lang="scss">
